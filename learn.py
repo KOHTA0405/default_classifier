@@ -7,7 +7,7 @@ import joblib
 data = np.load('processed.npz')
 X = data['X']
 y = data['y']
-X_train, X_val, y_train, y_test = train_test_split(X, y, random_state=0, test_size=0.2, stratify=y)
+X_train, X_val, y_train, y_val = train_test_split(X, y, random_state=0, test_size=0.2, stratify=y)
 
 # ニューラルモデルの作成
 model = MLPClassifier(solver="sgd", random_state=0, max_iter=100)
